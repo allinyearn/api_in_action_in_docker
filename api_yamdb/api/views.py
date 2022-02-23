@@ -8,7 +8,6 @@ from rest_framework.decorators import action, api_view
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
 from reviews.models import Category, Genre, Review, Title
 from users.models import User
 
@@ -105,6 +104,7 @@ class UserViewSet(viewsets.ModelViewSet):
             return Response(
                 serializer.errors, status=status.HTTP_400_BAD_REQUEST
             )
+        return status.HTTP_400_BAD_REQUEST
 
 
 class ReviewViewSet(viewsets.ModelViewSet):
