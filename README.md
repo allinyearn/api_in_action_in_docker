@@ -1,3 +1,5 @@
+![example workflow](https://github.com/allinyearn/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+
 # Docker-composed project of api_yamdb
 
 ### Описание
