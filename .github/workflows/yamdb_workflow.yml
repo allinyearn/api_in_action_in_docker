@@ -1,5 +1,7 @@
 name: Api_yamdb workflow
 
+on: [push]
+
 jobs:
   flake_test_and_pytest:
     runs-on: ubuntu-latest
