@@ -27,7 +27,7 @@ jobs:
   docker_image_push:
       name: Push Docker image to Docker Hub
       runs-on: ubuntu-latest
-      needs: tests
+      needs: flake_test_and_pytest
       steps:
         - name: Check out the repo
           uses: actions/checkout@v2 
@@ -45,7 +45,7 @@ jobs:
             tags: hunterxhunter/api_yamdb:latest
   deploy:
     runs-on: ubuntu-latest
-    needs: build_and_push_to_docker_hub
+    needs: docker_image_push
     steps:
     - name: executing remote ssh commands to deploy
       uses: appleboy/ssh-action@master
