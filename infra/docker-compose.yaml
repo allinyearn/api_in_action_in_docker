@@ -1,4 +1,4 @@
-version: '20.10.12'
+version: '2.2.3'
 
 services:
   db:
@@ -13,8 +13,6 @@ services:
     volumes:
       - static_value:/app/api_yamdb/reviews/static/
       - media_value:/app/media/
-    ports:
-      - "8000:8000"
     depends_on:
       - db
     env_file:
