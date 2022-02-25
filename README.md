@@ -23,6 +23,7 @@
  - Выполнить миграции командой ```docker-compose exec web python manage.py migrate```
  - А также создать суперюзера и собрать статику с помощью команд ```docker-compose exec web python manage.py``` и ```docker-compose exec web python collectstatic``` соответственно
  - Загрузить данные командой ```docker-compose exec web python manage.py loaddata ../infra/fixtures.json```
+ - Проёкт запущен и развёрнут по адресу: https://localhost:8000
 
 ### *Переменные для .env
  - DB_ENGINE
